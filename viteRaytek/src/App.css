@@ -1,0 +1,175 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.task-container {
+  display: flex; /* Enable flexbox */
+  align-items: center; /* Align child elements vertically */
+  margin-bottom: 10px; /* Add some spacing between tasks */
+}
+
+
+.editTextWithInlineButton {
+  display: flex;
+  align-items: center;
+}
+
+.task-container > div {
+  display: flex;
+  align-items: center;
+}
+
+.bubble {
+  display: flex; /* Pour conserver la disposition horizontale */
+  background-color: rgba(0, 0, 0, 0.7); /* Fond noir opaque */
+  padding: 10px; /* Espace autour du contenu */
+  border-radius: 10px; /* Coins arrondis */
+  margin-bottom: 10px; /* Espace entre les bulles */
+  justify-content: flex-end; /* Alignement à droite */  
+}
+
+/* Styles supplémentaires (optionnels) */
+.bubble:hover {
+  background-color: rgba(0, 0, 0, 0.8); /* Fond légèrement plus foncé au survol */
+}
+
+.bubble > * {
+  color: #fff !important; /* Couleur du texte blanc pour tous les éléments */
+}
+
+.delete-button, .calendar-button {
+  color: black !important; /* Couleur noire pour l'icône de la poubelle */
+}
+
+[aria-label="input component"] {
+  background-color: #000; /* Couleur de fond de l'éditeur */
+  color: #fff; /* Couleur du texte de l'éditeur */
+}
+
+.bubble {
+  opacity: 1; /* Adjust initial opacity */
+}
+
+.bubble.active {
+  opacity: 0.5; /* Adjust opacity for checked state */
+}
+
+.calendar-container {
+  /* Largeur et hauteur du calendrier */
+  width: 350px;
+  height: 400px;
+
+  /* Bordure et couleur d'arrière-plan */
+  border: 1px solid #ddd;
+  background-color: #fff;
+
+  /* Arrondissement des angles */
+  border-radius: 10px;
+
+  /* Ombre pour un effet de surélévation */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+
+  /* Police et taille par défaut */
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+.close-button {
+  /* Positionnement à droite */
+  float: right;
+
+  /* Taille et couleur du bouton */
+  width: 20px;
+  height: 20px;
+  color: #666;
+
+  /* Bordure et transparence */
+  border: none;
+  background-color: transparent;
+
+  /* Curseur lors du survol */
+  cursor: pointer;
+
+  /* Transition pour l'opacité */
+  transition: opacity 0.2s ease-in-out;
+}
+
+.close-button:hover {
+  /* Opacité réduite lors du survol */
+  opacity: 0.8;
+}
+
+
+
+.react-calendar .react-calendar__viewContainer {
+  /* Padding pour les jours */
+  padding: 10px;
+}
+
+.react-calendar .react-calendar__month-view .react-calendar__tile:hover {
+  /* Couleur d'arrière-plan lors du survol */
+  background-color: #f2f2f2;
+}
+
+.react-calendar .react-calendar__month-view .react-calendar__tile--active {
+  /* Couleur d'arrière-plan du jour sélectionné */
+  background-color: #007bff;
+
+  /* Couleur du texte du jour sélectionné */
+  color: #fff;
+}
+
+.react-calendar .react-calendar__navigation:hover {
+  /* Opacité réduite lors du survol */
+  opacity: 0.8;
+}
+
+.editTextWithInlineButton {
+  margin-right: 10px;
+}
+
+.delete-button,
+.calendar-button {
+  margin-left: 10px;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  font-size: 16px;
+}
+
+/* Checkbox styles */
+[type="checkbox"] {
+  /* Adjust these styles as needed */
+  width: 18px;
+  height: 18px;
+  appearance: none; /* Hide default checkbox appearance */
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+[type="checkbox"]:checked {
+  background-color: #007bff;
+  border-color: #007bff; /* Maintain border color consistency */
+}
+
+[type="checkbox"]:hover {
+  background-color: #f0f0f0; /* Light gray hover background */
+}
+
+[type="checkbox"]:active {
+  background-color: #ddd; /* Gray active background */
+}
+
+.bubble.active .delete-button,
+.bubble.active .calendar-button,
+.bubble.active button {
+  display: none;
+}
+
